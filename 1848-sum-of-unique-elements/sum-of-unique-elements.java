@@ -1,14 +1,13 @@
 class Solution {
     public int sumOfUnique(int[] nums) {
-        int n=nums.length;
-        HashMap<Integer,Integer>mpp=new HashMap<>();
-        for(int i=0;i<n;i++){
-            mpp.put(nums[i],mpp.getOrDefault(nums[i],0)+1);
+        int[] freq=new int[101];
+        for(int num:nums){
+            freq[num]++;
         }
         int sum=0;
-        for(int num:mpp.keySet()){
-            if(mpp.get(num)==1){
-                sum+=num;
+        for(int i=1;i<=100;i++){
+            if(freq[i]==1){
+                sum+=i;
             }
         }
         return sum;
