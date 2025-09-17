@@ -13,11 +13,9 @@ class Solution {
         int n=s.length();
         int res=0;
         for(int i=0;i<n;i++){
+            int[] freq=new int[26];
             for(int j=i;j<n;j++){
-                int[] freq=new int[26];
-                for(int k=i;k<=j;k++){
-                    freq[s.charAt(k)-'a']++;
-                }
+                freq[s.charAt(j)-'a']++;
                 res+=getBeauty(freq);
             }
         }
