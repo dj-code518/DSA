@@ -6,12 +6,12 @@ class Solution {
             mpp.put(num,mpp.getOrDefault(num,0)+1);
             maxfreq=Math.max(maxfreq,mpp.get(num));
         }
-        int total=0;
+        int sum=0;
         for(int n:mpp.values()){
             if(n==maxfreq){
-                total+=n;
+                sum+=n;
             }
         }
-        return total;
+        return sum;
     }
 }
