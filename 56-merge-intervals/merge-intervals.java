@@ -1,8 +1,11 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
         int n=intervals.length;
+        if(n<=1){
+            return intervals;
+        }
         Arrays.sort(intervals,Comparator.comparingInt(i->i[0]));
-        List<int[]>res=new ArrayList<>();
+        ArrayList<int[]>res=new ArrayList<>();
         int[] newInterval=intervals[0];
         res.add(newInterval);
         for(int[] interval:intervals){
