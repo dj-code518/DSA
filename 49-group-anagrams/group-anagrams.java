@@ -1,6 +1,5 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
-        //DJ
         HashMap<String,List<String>>mpp=new HashMap<>();
         for(String word:strs){
             char[] chars=word.toCharArray();
