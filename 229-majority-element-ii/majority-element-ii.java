@@ -6,7 +6,7 @@ class Solution {
         for(int i=0;i<n;i++){
             mpp.put(nums[i],mpp.getOrDefault(nums[i],0)+1);
         }
-        for(int num:mpp.keySet()){
+        for(int num: mpp.keySet()){
             if(mpp.get(num)>n/3){
                 res.add(num);
             }
