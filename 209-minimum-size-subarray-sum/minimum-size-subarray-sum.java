@@ -13,8 +13,8 @@ class Solution {
             }
         }
         if(minlen==n+1){
-            return 0;
-        }
+                return 0;
+            }
         return minlen;
     }
 }
