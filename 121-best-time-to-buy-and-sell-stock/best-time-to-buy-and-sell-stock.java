@@ -9,7 +9,7 @@ class Solution {
             }
             else{
                 int curr_profit=prices[i]-buy_price;
-                profit=Math.max(curr_profit,profit);
+                profit=Math.max(profit,curr_profit);
             }
         }
         return profit;
